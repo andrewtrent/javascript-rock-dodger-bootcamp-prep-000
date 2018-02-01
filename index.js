@@ -81,15 +81,12 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
-  
   clearInterval(gameInterval);
-  
-  ROCKS.forEach(function destroy(rock){
+  ROCKS.forEach(function destroyAll(rock){
     rock.remove();
-    
   });
 
-  
+
   window.removeEventListener('keydown', moveDodger);
   window.alert("YOU LOSE!");
 
