@@ -55,15 +55,14 @@ function createRock(x) {
    */
   function moveRock() {
     rock.style.top = `${top += 2}px`;
-    if (top < 400) {
+    if (top < GAME_HEIGHT) {
       window.requestAnimationFrame(moveRock);
       if (checkCollision(rock) === true) {
       endGame();
       }
     }
-    if (top >= 400) {
+    if (top >= GAME_HEIGHT) {
       ROCKS[0].remove();
-      ROCKS.shift();
     }
 
   }  
